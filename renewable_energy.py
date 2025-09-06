@@ -34,6 +34,7 @@ plt.title("Philippines Power Generation by Fuel Source (1990–2020)")
 plt.ylabel("Power Generated (GWh)")
 plt.legend(title="Fuel Source")
 plt.grid(True, linestyle="--", alpha=0.5)
+plt.savefig("charts/fuel_sources_trend.png")
 
 # Plot area chart for all fuel sources to visualize composition over time
 ps.set_index("Years")[["Biomass", "Coal", "Geothermal", "Hydro", 
@@ -42,6 +43,7 @@ ps.set_index("Years")[["Biomass", "Coal", "Geothermal", "Hydro",
 )
 plt.title("Philippines Energy Mix Composition (1990–2020)")
 plt.ylabel("Power Generated (GWh)")
+plt.savefig("charts/energy_mix_area.png")
 
 # Define energy groups
 renewables = ["Biomass", "Geothermal", "Hydro", "Solar", "Wind"]
@@ -71,6 +73,8 @@ labels = [
 ax.legend(labels=labels, title="Energy Groups")
 plt.title("Renewables vs Fossil Fuels (1990–2020)")
 plt.ylabel("Power Generated (GWh)")
+plt.savefig("charts/renewables_vs_fossils.png")
+
 
 # Plot % Share to show the share of energy groups
 ax = ps.plot(
@@ -83,4 +87,5 @@ ax.legend(labels, title="Energy Groups")
 plt.title("Renewables vs Fossil Fuels Share (%) (1990–2020)")
 plt.ylabel("Share of Total Power Generation (%)")
 plt.grid(True, linestyle="--", alpha=0.5)
+plt.savefig("charts/renewables_vs_fossils_share.png")
 plt.show()

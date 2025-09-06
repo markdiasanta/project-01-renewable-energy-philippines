@@ -55,5 +55,5 @@ This data source is valuable for various data-driven projects in the Philippines
 No other DEP Data HUb projects linked to this data source.
 
 ## Additional Resources
-File is in csv format but contains "commas" in some values. 
+File is in csv format contains "commas" in some values. 
 These values may need to be fixed so as not to create future error in analysis.
